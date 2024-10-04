@@ -3,7 +3,7 @@ from transformers import BlipProcessor, BlipForConditionalGeneration
 from PIL import Image
 
 # Initialize the processor and model from Hugging Face
-processor = BlipProcessor.from_pretrained("Salesforce/blip-image-captioning-base")
+processor = BlipProcessor.from_pretrained("Salesforce/blip-image-captioning-base", clean_up_tokenization_spaces=False)
 model = BlipForConditionalGeneration.from_pretrained("Salesforce/blip-image-captioning-base")
 
 # Load the image
